@@ -2,9 +2,9 @@ import { type IncomingMessage, type Server as HttpServer, type ServerResponse, c
 import type { Server as HttpsServer } from "node:https";
 import type { Http2Server, Http2SecureServer, Http2ServerRequest, Http2ServerResponse } from "node:http2";
 
-type AnyServer = HttpServer | HttpsServer | Http2Server | Http2SecureServer;
-type Incoming<T extends AnyServer> = T extends Http2Server | Http2SecureServer ? Http2ServerRequest : IncomingMessage;
-type Response<T extends AnyServer> = T extends Http2Server | Http2SecureServer ? Http2ServerResponse : ServerResponse;
+export type AnyServer = HttpServer | HttpsServer | Http2Server | Http2SecureServer;
+export type Incoming<T extends AnyServer> = T extends Http2Server | Http2SecureServer ? Http2ServerRequest : IncomingMessage;
+export type Response<T extends AnyServer> = T extends Http2Server | Http2SecureServer ? Http2ServerResponse : ServerResponse;
 export interface Options<T extends AnyServer = AnyServer> {
     /** @default 127.0.0.1 */
     host?: string;

@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/status-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A status server for my projects.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
