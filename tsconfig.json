@@ -1,0 +1,10 @@
+{
+  "extends": "@uwu-codes/tsconfig/esm",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "inlineSourceMap": true
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules", "dist", "bin"]
+}
